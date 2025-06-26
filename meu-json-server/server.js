@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 server.use(middlewares);
 server.use(router);
 
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
+// Escutando no 0.0.0.0 para o Render conseguir acessar
+server.listen(port, '0.0.0.0', () => {
+  console.log(`JSON Server is running on http://0.0.0.0:${port}`);
 });
