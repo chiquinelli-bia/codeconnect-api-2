@@ -1,89 +1,136 @@
 {
-  "pensamentos": [
+  "projetos": [
     {
-      "id": "2a56",
-      "favorito": false,
-      "conteudo": "Vc faz TI? Conserta meu celular!",
-      "autoria": "Grupo da família",
-      "data": "2025-06-30T13:00:00Z"
+      "id": 1,
+      "imagem_capa": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/artigo1.png?raw=true",
+      "titulo": "Introdução ao Desenvolvimento Web com HTML e CSS",
+      "resumo": "Um guia abrangente para iniciantes sobre como começar a criar páginas web usando HTML e CSS.",
+      "tags": ["programacao", "frontend", "html", "css"],
+      "linhas_de_codigo": 17,
+      "compartilhamentos": 50,
+      "comentarios": 2,
+      "usuario": {
+        "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone1.png?raw=true",
+        "nome": "Julia"
+      },
+      "conteudo_codigo": "  <html>\r\n    <head>\r\n       <title>Minha Página</title>\r\n        <style>\r\n          body {\r\n            font-family: 'Arial', sans-serif;\r\n            background-color: #f0f0f0;\r\n            color: #333;\r\n            text-align: center;\r\n            }\r\n        </style>\r\n    </head>\r\n    <body>\r\n      <h1>Olá, mundo!</h1>\r\n      <p>Bem-vindo ao meu site.</p>\r\n    </body>\r\n</html>",
+      "comentarios_postagem": [
+        {
+          "id": 1,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone5.png?raw=true",
+            "nome": "Carlos"
+          },
+          "texto": "Ótimo guia para iniciantes!"
+        },
+        {
+          "id": 2,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone6.png?raw=true",
+            "nome": "Larissa"
+          },
+          "texto": "Adorei as dicas sobre CSS!"
+        }
+      ]
     },
     {
-      "id": "4c7d",
-      "favorito": false,
-      "conteudo": "Da vida reclama, mas sem ela não vive!",
-      "autoria": "Mestre Yoda",
-      "data": "2025-06-29T12:45:00Z"
+      "id": 2,
+      "imagem_capa": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/artigo2.png?raw=true",
+      "titulo": "Aprenda Python: Fundamentos para Iniciantes",
+      "resumo": "Explore os conceitos básicos da linguagem de programação Python e dê os primeiros passos na codificação.",
+      "tags": ["programacao", "backend", "dados", "python"],
+      "linhas_de_codigo": 2,
+      "compartilhamentos": 40,
+      "comentarios": 2,
+      "usuario": {
+        "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone2.png?raw=true",
+        "nome": "Amanda"
+      },
+      "conteudo_codigo": "# Meu Primeiro Programa em Python\r\nprint(\"Olá, mundo!\")",
+      "comentarios_postagem": [
+        {
+          "id": 3,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone7.png?raw=true",
+            "nome": "Gabriela"
+          },
+          "texto": "Python é uma linguagem incrível!"
+        },
+        {
+          "id": 4,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone8.png?raw=true",
+            "nome": "Lucas"
+          },
+          "texto": "Ótimo guia para iniciantes!"
+        }
+      ]
     },
     {
-      "id": "5b8a",
-      "favorito": false,
-      "conteudo": "Na minha máquina funciona!",
-      "autoria": "Dev",
-      "data": "2025-06-28T15:10:00Z"
+      "id": 3,
+      "imagem_capa": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/artigo3.png?raw=true",
+      "titulo": "Dominando JavaScript: Conceitos Avançados",
+      "resumo": "Aprofunde seus conhecimentos em JavaScript, abordando tópicos avançados e práticos para se tornar um desenvolvedor front-end mais habilidoso.",
+      "tags": ["programacao", "frontend", "backend", "javascript"],
+      "linhas_de_codigo": 15,
+      "compartilhamentos": 55,
+      "comentarios": 2,
+      "usuario": {
+        "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone3.png?raw=true",
+        "nome": "Pedro"
+      },
+      "conteudo_codigo": "// Usando Promises em JavaScript\r\nfunction minhaPromise() {\r\n  return new Promise((resolve, reject) => {\r\n    setTimeout(() => {\r\n      resolve('Promessa resolvida!');\r\n    }, 2000);\r\n  });\r\n}\r\n\r\nasync function executaPromise() {\r\n  const resultado = await minhaPromise();\r\n  console.log(resultado);\r\n}\r\n\r\nexecutaPromise();",
+      "comentarios_postagem": [
+        {
+          "id": 5,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone9.png?raw=true",
+            "nome": "Isabela"
+          },
+          "texto": "JavaScript é poderoso!"
+        },
+        {
+          "id": 6,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone10.png?raw=true",
+            "nome": "Rafael"
+          },
+          "texto": "Excelente explicação sobre Promises."
+        }
+      ]
     },
     {
-      "id": "68uy",
-      "favorito": false,
-      "conteudo": "Esse é de laranja que parece de limão, mas tem gosto de tamarindo!",
-      "autoria": "Chaves",
-      "data": "2025-06-27T10:30:00Z"
-    },
-    {
-      "id": "b807",
-      "favorito": false,
-      "conteudo": "Melhor professor, o fracasso é!",
-      "autoria": "Mestre Yoda",
-      "data": "2025-06-26T17:00:00Z"
-    },
-    {
-      "id": "9f3c",
-      "favorito": false,
-      "conteudo": "Você não é todo mundo!",
-      "autoria": "Mãe",
-      "data": "2025-06-25T08:40:00Z"
-    },
-    {
-      "id": "6a2b",
-      "favorito": false,
-      "conteudo": "Foi sem querer querendo!",
-      "autoria": "Chaves",
-      "data": "2025-06-24T14:25:00Z"
-    },
-    {
-      "id": "7e2a",
-      "favorito": false,
-      "conteudo": "Que a força esteja com você!",
-      "autoria": "Mestre Yoda",
-      "data": "2025-06-23T11:15:00Z"
-    },
-    {
-      "id": "5c8f",
-      "favorito": false,
-      "conteudo": "Resolver o bug não consegue? Esfriar a cabeça vc deve.",
-      "autoria": "Mestre Yoda",
-      "data": "2025-06-22T16:55:00Z"
-    },
-    {
-      "id": "2d6e",
-      "favorito": false,
-      "conteudo": "Não faça drama, faça café! :)",
-      "autoria": "Dev",
-      "data": "2025-06-21T13:35:00Z"
-    },
-    {
-      "id": "3f1a",
-      "favorito": false,
-      "conteudo": "Conserta minha impressora?",
-      "autoria": "Grupo da família",
-      "data": "2025-06-01T09:20:00Z"
-    },
-    {
-      "id": "8b4c",
-      "favorito": false,
-      "conteudo": "A vingança nunca é plena... mata a alma e a envenena...",
-      "autoria": "Seu Madruga",
-      "data": "2025-06-19T18:00:00Z"
+      "id": 4,
+      "imagem_capa": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/artigo4.png?raw=true",
+      "titulo": "Machine Learning na Prática com Python",
+      "resumo": "Um guia passo a passo para implementar algoritmos de Machine Learning utilizando a linguagem de programação Python.",
+      "tags": ["programacao", "machine learning", "python", "dados"],
+      "linhas_de_codigo": 22,
+      "compartilhamentos": 45,
+      "comentarios": 2,
+      "usuario": {
+        "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone4.png?raw=true",
+        "nome": "Akemi"
+      },
+      "conteudo_codigo": "# Classificação usando Scikit-Learn\r\nfrom sklearn import datasets\r\nfrom sklearn.model_selection import train_test_split\r\nfrom sklearn.neighbors import KNeighborsClassifier\r\nfrom sklearn import metrics\r\n\r\n# Carregando o conjunto de dados Iris\r\niris = datasets.load_iris()\r\nX_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2, random_state=42)\r\n\r\n# Criando o modelo KNN\r\nknn = KNeighborsClassifier(n_neighbors=3)\r\n\r\n# Treinando o modelo\r\nknn.fit(X_train, y_train)\r\n\r\n# Fazendo previsões\r\ny_pred = knn.predict(X_test)\r\n\r\n# Avaliando a precisão do modelo\r\naccuracy = metrics.accuracy_score(y_test, y_pred)\r\nprint(f'Acurácia do modelo: {accuracy}')",
+      "comentarios_postagem": [
+        {
+          "id": 7,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone11.png?raw=true",
+            "nome": "Daniela"
+          },
+          "texto": "Machine Learning é fascinante!"
+        },
+        {
+          "id": 8,
+          "usuario": {
+            "imagem": "https://github.com/MonicaHillman/codeconnect-api/blob/main/img/icone12.png?raw=true",
+            "nome": "Laura"
+          },
+          "texto": "Guia prático e bem explicado."
+        }
+      ]
     }
   ]
 }
-
