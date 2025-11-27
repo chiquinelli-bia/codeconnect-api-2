@@ -14,10 +14,11 @@ const port = process.env.PORT || 3000;
 server.use(express.json());
 server.use(middlewares);
 
-const upload = multer({ dest: "tmp/" });
+// multer salva localmente na pasta uploads/
+const upload = multer({ dest: "uploads/" });
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO = "chiquinelli-bia/codeconnect-api";
+const REPO = "chiquinelli-bia/codeconnect-api-2";
 const BRANCH = "main";
 
 async function getFileSha(pathInRepo) {
@@ -40,7 +41,10 @@ server.post("/upload", upload.single("image"), async (req, res) => {
 
     const filePath = req.file.path;
     const fileName = req.file.originalname;
-    const repoPath = `img/${fileName}`;
+
+    // agora envia para uploads/
+    const repoPath = `uploads/${fileName}`;
+
     const fileBuffer = fs.readFileSync(filePath);
     const contentBase64 = fileBuffer.toString("base64");
 
@@ -51,6 +55,7 @@ server.post("/upload", upload.single("image"), async (req, res) => {
       content: contentBase64,
       branch: BRANCH,
     };
+
     if (existingSha) body.sha = existingSha;
 
     const response = await fetch(
@@ -66,15 +71,17 @@ server.post("/upload", upload.single("image"), async (req, res) => {
     );
 
     const result = await response.json();
+
     fs.unlinkSync(filePath);
 
     if (!response.ok) {
       return res.status(response.status).json({ error: result });
     }
 
+    // URL correta
     const downloadUrl =
       result.content?.download_url ||
-      `https://raw.githubusercontent.com/${REPO}/${BRANCH}/img/${encodeURIComponent(
+      `https://raw.githubusercontent.com/${REPO}/${BRANCH}/uploads/${encodeURIComponent(
         fileName
       )}`;
 
