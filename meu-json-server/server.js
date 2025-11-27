@@ -34,6 +34,9 @@ async function getFileSha(pathInRepo) {
   return null;
 }
 
+// ----------------------
+// ROTA DE UPLOAD (DEVE VIR ANTES DO ROUTER!)
+// ----------------------
 server.post("/upload", upload.single("image"), async (req, res) => {
   try {
     if (!req.file)
@@ -42,9 +45,7 @@ server.post("/upload", upload.single("image"), async (req, res) => {
     const filePath = req.file.path;
     const fileName = req.file.originalname;
 
-    // agora envia para uploads/
     const repoPath = `uploads/${fileName}`;
-
     const fileBuffer = fs.readFileSync(filePath);
     const contentBase64 = fileBuffer.toString("base64");
 
@@ -78,7 +79,6 @@ server.post("/upload", upload.single("image"), async (req, res) => {
       return res.status(response.status).json({ error: result });
     }
 
-    // URL correta
     const downloadUrl =
       result.content?.download_url ||
       `https://raw.githubusercontent.com/${REPO}/${BRANCH}/uploads/${encodeURIComponent(
@@ -92,8 +92,14 @@ server.post("/upload", upload.single("image"), async (req, res) => {
   }
 });
 
+// ----------------------
+// JSON SERVER ROUTER (DEVE VIR ANTES DO LISTEN)
+// ----------------------
 server.use(router);
 
+// ----------------------
+// LISTEN
+// ----------------------
 server.listen(port, "0.0.0.0", () => {
   console.log(`🎉 JSON Server rodando na porta ${port}`);
 });
