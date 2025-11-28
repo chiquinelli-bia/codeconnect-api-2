@@ -2,7 +2,6 @@ const jsonServer = require("json-server");
 const express = require("express");
 const multer = require("multer");
 const fs = require("fs");
-const fetch = require("node-fetch");
 require("dotenv").config();
 
 const server = express();
@@ -34,10 +33,7 @@ async function getFileSha(pathInRepo) {
   return null;
 }
 
-// ----------------------
-// ROTA DE UPLOAD (DEVE VIR ANTES DO ROUTER!)
-// ----------------------
-server.post("/uploads", upload.single("image"), async (req, res) => {
+server.post("/upload", upload.single("image"), async (req, res) => {
   try {
     if (!req.file)
       return res.status(400).json({ error: "nenhum arquivo enviado" });
@@ -92,14 +88,8 @@ server.post("/uploads", upload.single("image"), async (req, res) => {
   }
 });
 
-// ----------------------
-// JSON SERVER ROUTER (DEVE VIR ANTES DO LISTEN)
-// ----------------------
 server.use(router);
 
-// ----------------------
-// LISTEN
-// ----------------------
 server.listen(port, "0.0.0.0", () => {
   console.log(`🎉 JSON Server rodando na porta ${port}`);
 });
