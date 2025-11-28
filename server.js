@@ -33,7 +33,7 @@ async function getFileSha(pathInRepo) {
   return null;
 }
 
-server.post("/upload", upload.single("image"), async (req, res) => {
+server.post("/uploads", upload.single("image"), async (req, res) => {
   try {
     if (!req.file)
       return res.status(400).json({ error: "nenhum arquivo enviado" });
