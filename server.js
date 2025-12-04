@@ -3,7 +3,7 @@ const jsonServer = require("json-server");
 const multer = require("multer");
 const fs = require("fs");
 require("dotenv").config();
-const fetch = require("node-fetch");
+const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const server = express();
 const router = jsonServer.router("db.json");
