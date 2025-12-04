@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 const express = require("express");
 const jsonServer = require("json-server");
 const multer = require("multer");
@@ -10,6 +12,32 @@ const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
 const port = process.env.PORT || 3000;
+
+// ROTA PARA DELETAR PROJETO
+app.delete("/projetos/:id", (req, res) => {
+  const id = req.params.id;
+
+  // procura o index do projeto
+  const index = projetos.findIndex((p) => p.id === id);
+  if (index === -1) {
+    return res.status(404).json({ erro: "Projeto não encontrado" });
+  }
+  const projeto = projetos[index];
+
+  // Se tiver imagem, tenta remover da pasta uploads
+  if (projeto.imagem_url) {
+    const caminhoImagem = path.join("uploads", path.basename(projeto.imagem_url));
+    fs.unlink(caminhoImagem, (erro) => {
+      if (erro) {
+        console.log("⚠️ Erro ao excluir imagem (não é crítico):", erro);
+      }
+    });
+  }
+  // Remove o projeto do array
+  projetos.splice(index, 1);
+  res.json({ mensagem: "Projeto excluído com sucesso" });
+});
+
 
 server.use(express.json());
 server.use(middlewares);
