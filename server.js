@@ -3,7 +3,6 @@ import path from "path";
 const express = require("express");
 const jsonServer = require("json-server");
 const multer = require("multer");
-const fs = require("fs");
 require("dotenv").config();
 const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
