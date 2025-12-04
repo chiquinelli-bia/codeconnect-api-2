@@ -1,10 +1,9 @@
-// server.js
 const express = require("express");
 const jsonServer = require("json-server");
 const multer = require("multer");
 const fs = require("fs");
 require("dotenv").config();
-const fetch = require("node-fetch"); // se não tiver, instalar: npm install node-fetch
+const fetch = require("node-fetch");
 
 const server = express();
 const router = jsonServer.router("db.json");
@@ -15,10 +14,9 @@ const port = process.env.PORT || 3000;
 server.use(express.json());
 server.use(middlewares);
 
-// multer salva localmente na pasta uploads/
+// =============== UPLOAD DE IMAGEM PARA O GITHUB ===============
 const upload = multer({ dest: "uploads/" });
 
-// Rota para enviar imagem direto para GitHub
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const REPO = "chiquinelli-bia/codeconnect-api-2";
 const BRANCH = "main";
@@ -82,44 +80,23 @@ server.post("/uploads", upload.single("image"), async (req, res) => {
   }
 });
 
-// Rota para criar projetos com imagem + campos JSON
-const uploadProjeto = upload.single("imagem");
-
-server.post("/projetos", uploadProjeto, (req, res) => {
+// =============== CRIAR PROJETO (APENAS JSON) ===============
+server.post("/projetos", (req, res) => {
   try {
-    const db = router.db; // acesso ao db.json
-
-    const imagem = req.file
-      ? `/uploads/${req.file.filename}`
-      : null;
-
-    const {
-      titulo,
-      resumo,
-      linhas_de_codigo,
-      compartilhamentos,
-      comentarios,
-      conteudo_codigo,
-    } = req.body;
-
-    const tags = req.body.tags ? JSON.parse(req.body.tags) : [];
-    const usuario = req.body.usuario ? JSON.parse(req.body.usuario) : {};
-    const comentarios_postagem = req.body.comentarios_postagem
-      ? JSON.parse(req.body.comentarios_postagem)
-      : [];
+    const db = router.db;
 
     const novoProjeto = {
       id: Date.now(),
-      titulo,
-      resumo,
-      tags,
-      linhas_de_codigo,
-      compartilhamentos,
-      comentarios,
-      usuario,
-      conteudo_codigo,
-      comentarios_postagem,
-      imagem,
+      imagem_capa: req.body.imagem_capa,
+      titulo: req.body.titulo,
+      resumo: req.body.resumo,
+      tags: req.body.tags || [],
+      linhas_de_codigo: req.body.linhas_de_codigo,
+      compartilhamentos: req.body.compartilhamentos,
+      comentarios: req.body.comentarios,
+      usuario: req.body.usuario || {},
+      conteudo_codigo: req.body.conteudo_codigo,
+      comentarios_postagem: req.body.comentarios_postagem || [],
     };
 
     db.get("projetos").push(novoProjeto).write();
