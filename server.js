@@ -1,5 +1,4 @@
 import fs from "fs";
-import path from "path";
 import express from "express";
 import jsonServer from "json-server";
 import multer from "multer";
@@ -8,6 +7,9 @@ import fetch from "node-fetch";
 
 dotenv.config();
 
+// ===============================
+// SETUP BÁSICO
+// ===============================
 const server = express();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
@@ -29,7 +31,11 @@ const BRANCH = "main";
 async function getFileSha(pathInRepo) {
   const res = await fetch(
     `https://api.github.com/repos/${REPO}/contents/${pathInRepo}`,
-    { headers: { Authorization: `Bearer ${GITHUB_TOKEN}` } }
+    {
+      headers: {
+        Authorization: `Bearer ${GITHUB_TOKEN}`,
+      },
+    }
   );
 
   if (res.ok) {
@@ -65,7 +71,7 @@ const upload = multer({ dest: "uploads/" });
 server.post("/uploads", upload.single("image"), async (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).json({ error: "nenhum arquivo enviado" });
+      return res.status(400).json({ erro: "nenhum arquivo enviado" });
     }
 
     const fileBuffer = fs.readFileSync(req.file.path);
@@ -109,7 +115,26 @@ server.post("/uploads", upload.single("image"), async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "erro no servidor" });
+    res.status(500).json({ erro: "erro no servidor" });
+  }
+});
+
+// ===============================
+// DELETAR IMAGEM (SOMENTE IMAGEM)
+// ===============================
+server.delete("/uploads", async (req, res) => {
+  const { repo_path } = req.body;
+
+  if (!repo_path) {
+    return res.status(400).json({ erro: "repo_path é obrigatório" });
+  }
+
+  try {
+    await deleteGithubFile(repo_path);
+    res.json({ mensagem: "Imagem removida com sucesso" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ erro: "Erro ao remover imagem" });
   }
 });
 
@@ -165,8 +190,12 @@ server.delete("/projetos/:id", async (req, res) => {
   res.json({ mensagem: "Projeto e imagem excluídos" });
 });
 
+// ===============================
+// JSON SERVER (SEMPRE NO FINAL)
+// ===============================
 server.use(router);
 
+// ===============================
 server.listen(port, "0.0.0.0", () => {
   console.log(`🚀 API rodando na porta ${port}`);
 });
