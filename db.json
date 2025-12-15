@@ -6,7 +6,7 @@
       "titulo": "Fokus - Lista de Tarefas com Cronômetro",
       "resumo": "Aplicação com cronômetro regressivo, gerenciamento de tarefas, edição e persistência via LocalStorage. Focada em eventos, interação entre elementos e modularização.",
       "tags": ["javascript", "html", "css", "front-end", "programação"],
-      "linhas_de_codigo": "861",
+      "linhas_de_codigo": 861,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
@@ -30,14 +30,14 @@
         "git",
         "github"
       ],
-      "linhas_de_codigo": "1883",
+      "linhas_de_codigo": 1883,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -53,14 +53,14 @@
         "git",
         "github"
       ],
-      "linhas_de_codigo": "622",
+      "linhas_de_codigo": 622,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -76,14 +76,14 @@
         "api",
         "acessibilidade"
       ],
-      "linhas_de_codigo": "1278",
+      "linhas_de_codigo": 1278,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -92,14 +92,14 @@
       "titulo": "VidFlow",
       "resumo": "Plataforma de vídeos focada em acessibilidade, navegação por teclado, foco visível e melhorias semânticas.",
       "tags": ["html", "css", "javascript", "acessibilidade", "front-end"],
-      "linhas_de_codigo": "1164",
+      "linhas_de_codigo": 1164,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -108,14 +108,14 @@
       "titulo": "ByteBank",
       "resumo": "Plataforma com gráficos dinâmicos em tempo real usando Web Workers, Axios e arquitetura modular para performance.",
       "tags": ["javascript", "api", "front-end", "programação"],
-      "linhas_de_codigo": "555",
+      "linhas_de_codigo": 555,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -131,14 +131,14 @@
         "front-end",
         "design system"
       ],
-      "linhas_de_codigo": "1.697",
+      "linhas_de_codigo": 1.697,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -147,14 +147,14 @@
       "titulo": "Devs and Dragons",
       "resumo": "RPG com cartas, herança, polimorfismo e classes especializadas. Estrutura organizada e documentação básica.",
       "tags": ["javascript", "programação", "front-end"],
-      "linhas_de_codigo": "618",
+      "linhas_de_codigo": 618,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -163,14 +163,14 @@
       "titulo": "Lista de Compras",
       "resumo": "Aplicação para inserção, edição e marcação de compras, com interface acessível e código organizado.",
       "tags": ["javascript", "html", "css", "front-end"],
-      "linhas_de_codigo": "267",
+      "linhas_de_codigo": 267,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -179,14 +179,14 @@
       "titulo": "Número Secreto",
       "resumo": "Jogo interativo com feedback imediato, funções reutilizáveis e lógica com arrays e DOM.",
       "tags": ["javascript", "front-end", "programação"],
-      "linhas_de_codigo": "280",
+      "linhas_de_codigo": 280,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -195,14 +195,14 @@
       "titulo": "AluGames",
       "resumo": "Simulador de aluguel e devolução de jogos, com DOM dinâmico, lógica clara e controle de estado.",
       "tags": ["javascript", "front-end", "html", "css"],
-      "linhas_de_codigo": "185",
+      "linhas_de_codigo": 185,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -211,14 +211,14 @@
       "titulo": "Carrinho de Compras",
       "resumo": "Sistema com adição, remoção e total automático usando arrays, loops e feedback visual.",
       "tags": ["javascript", "front-end", "programação"],
-      "linhas_de_codigo": "286",
+      "linhas_de_codigo": 286,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -227,14 +227,14 @@
       "titulo": "Compras no Cinema",
       "resumo": "Sistema de ingressos com validação, controle de estoque e feedback visual acessível.",
       "tags": ["javascript", "front-end", "html", "css"],
-      "linhas_de_codigo": "226",
+      "linhas_de_codigo": 226,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     },
     {
@@ -243,14 +243,14 @@
       "titulo": "Amigo Secreto",
       "resumo": "Sorteio interativo com embaralhamento, validação e feedback visual utilizando arrays e DOM.",
       "tags": ["javascript", "front-end", "programação"],
-      "linhas_de_codigo": "215",
+      "linhas_de_codigo": 215,
       "compartilhamentos": 0,
       "comentarios": 0,
       "usuario": {
         "imagem": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/download.png?raw=true",
         "nome": "Usuario"
       },
-      "conteudo_codigo": "",
+      "conteudo_codigo": " ",
       "comentarios_postagem": []
     }
   ]
