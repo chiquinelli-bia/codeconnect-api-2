@@ -23,12 +23,16 @@
       "resumo": "Upload de imagens com pré-visualização, formulários dinâmicos, layout responsivo e navegação lateral. Estudo de DOM, assincronicidade e interações rápidas.",
       "tags": [
         "javascript",
+        "react",
         "html",
         "css",
         "front-end",
         "api",
         "git",
-        "github"
+        "github",
+        "node.js",
+        "vite",
+        "axios"
       ],
       "linhas_de_codigo": 1883,
       "compartilhamentos": 0,
@@ -51,7 +55,11 @@
         "front-end",
         "programação",
         "git",
-        "github"
+        "github",
+        "node.js",
+        "html",
+        "css",
+        "axios"
       ],
       "linhas_de_codigo": 622,
       "compartilhamentos": 0,
@@ -107,7 +115,16 @@
       "imagem_capa": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/bytebank.png?raw=true",
       "titulo": "ByteBank",
       "resumo": "Plataforma com gráficos dinâmicos em tempo real usando Web Workers, Axios e arquitetura modular para performance.",
-      "tags": ["javascript", "api", "front-end", "programação"],
+      "tags": [
+        "javascript",
+        "api",
+        "front-end",
+        "programação",
+        "css",
+        "html",
+        "node.js",
+        "axios"
+      ],
       "linhas_de_codigo": 555,
       "compartilhamentos": 0,
       "comentarios": 0,
@@ -124,12 +141,11 @@
       "titulo": "Calmaria Spa",
       "resumo": "Landing page acessível seguindo WCAG com navegação por teclado, modais acessíveis e código semântico.",
       "tags": [
-        "html",
-        "css",
         "javascript",
         "acessibilidade",
         "front-end",
-        "design system"
+        "design system",
+        "figma"
       ],
       "linhas_de_codigo": 1.697,
       "compartilhamentos": 0,
@@ -146,7 +162,7 @@
       "imagem_capa": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/devsanddragons.png?raw=true",
       "titulo": "Devs and Dragons",
       "resumo": "RPG com cartas, herança, polimorfismo e classes especializadas. Estrutura organizada e documentação básica.",
-      "tags": ["javascript", "programação", "front-end"],
+      "tags": ["javascript", "programação", "front-end", "vite"],
       "linhas_de_codigo": 618,
       "compartilhamentos": 0,
       "comentarios": 0,
@@ -226,7 +242,7 @@
       "imagem_capa": "https://raw.githubusercontent.com/chiquinelli-bia/codeconnect-api-2/main/uploads/ingressos.png?raw=true",
       "titulo": "Compras no Cinema",
       "resumo": "Sistema de ingressos com validação, controle de estoque e feedback visual acessível.",
-      "tags": ["javascript", "front-end", "html", "css"],
+      "tags": ["javascript", "front-end"],
       "linhas_de_codigo": 226,
       "compartilhamentos": 0,
       "comentarios": 0,
